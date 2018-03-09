@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="rootBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.gof.gui.Controller">
+
+      <FlowPane fx:id="base" prefHeight="475.0" prefWidth="475.0">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin></FlowPane>
+      <VBox fx:id="sidebar" prefHeight="477.0" prefWidth="218.0">
+
+
+         <TextFlow prefHeight="59.0" prefWidth="195.0">
+
+
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="196.0" text="Game of Life" textAlignment="CENTER">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.26">
+                           <input>
+                              <Bloom />
+                           </input>
+                        </Glow>
+                     </effect></Label>
+
+         </TextFlow>
+
+
+
+
+            <BorderPane prefHeight="33.0" prefWidth="195.0">
+                <left>
+                    <Button fx:id="runButton" mnemonicParsing="false" onAction="#onRun" prefHeight="25.0" prefWidth="49.0" text="Run" BorderPane.alignment="CENTER" />
+                </left>
+                <center>
+                   <Button fx:id="clearButton" mnemonicParsing="false" onAction="#onClear" text="Clear" BorderPane.alignment="CENTER" />
+                </center>
+                <right>
+                    <Button fx:id="stopButton" mnemonicParsing="false" onAction="#onStop" prefHeight="25.0" prefWidth="48.0" text="Stop" BorderPane.alignment="CENTER" />
+                </right>
+            </BorderPane>
+
+          <HBox fx:id="presetBox" prefHeight="92.0" prefWidth="183.0">
+          </HBox>
+
+            </VBox>
+</HBox>
